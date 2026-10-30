@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Senku — áo len cổ cao Totoka giá 150.000₫, mua 3 áo giảm 25%, đổi trả trong 14 ngày.">
+<title>Senku — Áo len cổ cao cho sáng lạnh</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#25241f;--muted:#6b6862;--cream:#f6f4ef;--line:#e9e6df;--olive:#626750}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:#fff;font-family:'DM Sans',sans-serif}a{color:inherit;text-decoration:none}
+.wrap{width:min(1100px,calc(100% - 48px));margin:auto}
+.announcement{text-align:center;background:#292a25;color:#fff;padding:10px 16px;font-size:12px;letter-spacing:.08em}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.logo{font:700 28px 'Playfair Display',serif;letter-spacing:.04em}
+.navlinks{display:flex;gap:30px;color:#615f59;font-size:13px}
+.navcta{border:1px solid #333;padding:11px 19px;font-size:12px;letter-spacing:.06em}
+.hero{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:56px;padding:56px 0 70px}
+.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.17em;color:var(--olive);font-weight:700}
+.hero h1{font:500 clamp(38px,4.8vw,60px)/1.1 'Playfair Display',serif;margin:18px 0}
+.hero p{color:var(--muted);line-height:1.8;max-width:470px;font-size:15px}
+.price-line{margin-top:22px;font-size:15px}.price-line b{font-size:24px}
+.actions{display:flex;align-items:center;gap:20px;margin-top:26px}
+.button{background:var(--ink);color:#fff;padding:15px 24px;font-size:12px;letter-spacing:.08em;display:inline-flex;gap:20px;align-items:center;transition:.2s}
+.button:hover{background:var(--olive);transform:translateY(-2px)}
+.quiet{font-size:12px;border-bottom:1px solid #aaa;padding:8px 0}
+.heroimg{height:500px;position:relative;background:#e8e5de;overflow:hidden}
+.heroimg img{width:100%;height:100%;object-fit:cover;object-position:center 35%}
+.imgnote{position:absolute;bottom:16px;left:16px;background:#fff;padding:11px 15px;font-size:11px;letter-spacing:.06em}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:24px 0;margin-bottom:84px}
+.fact{text-align:center;border-right:1px solid var(--line);padding:0 8px}.fact:last-child{border:0}
+.fact strong{display:block;font:500 25px 'Playfair Display',serif}.fact span{font-size:11px;color:var(--muted);letter-spacing:.06em}
+.section{padding:0 0 84px}.sectionhead{text-align:center;margin-bottom:34px}
+.sectionhead h2{font:500 38px 'Playfair Display',serif;margin:12px 0}.sectionhead p{color:var(--muted);font-size:13px}
+.colors{display:grid;grid-template-columns:minmax(0,760px);justify-content:center}
+.cardimg{aspect-ratio:1.35;overflow:hidden;background:var(--cream);position:relative}
+.cardimg img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.tag{position:absolute;top:14px;left:14px;background:#fff;padding:8px 10px;font-size:10px;letter-spacing:.07em}
+.productrow{display:flex;justify-content:space-between;gap:12px;font-size:15px;padding-top:15px}.price{font-weight:700}
+.sub{margin-top:7px;color:var(--muted);font-size:12px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.chips span{border:1px solid var(--line);padding:6px 12px;font-size:12px}
+.story{background:var(--cream);padding:64px 0}.storyinner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.story h2{font:500 36px/1.2 'Playfair Display',serif;margin:12px 0}
+.story p{color:#6f6d66;line-height:1.9;font-size:14px}
+.benefits{display:grid;gap:14px}.benefit{background:#fff;padding:17px 20px;font-size:13px;line-height:1.6}.benefit b{display:block;margin-bottom:4px}
+.faq{padding:80px 0}.faq details{border-bottom:1px solid var(--line);padding:18px 4px;max-width:760px;margin:auto}
+.faq summary{cursor:pointer;font-weight:600;font-size:15px}.faq p{color:var(--muted);font-size:14px;line-height:1.8;margin:12px 0 0}
+.promo{background:#292a25;color:#fff;text-align:center;padding:60px 20px}
+.promo h2{font:500 38px 'Playfair Display',serif;margin:12px 0}.promo p{color:#d0cec6;font-size:14px;line-height:1.8}
+.promo .button{background:#fff;color:var(--ink);margin-top:14px}
+.footer{padding:36px 0;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.footer .logo{font-size:22px}.social{display:flex;gap:20px;font-size:12px}.copy{color:#888;font-size:11px}
+@media(max-width:760px){.wrap{width:min(100% - 32px,520px)}.navlinks{display:none}.hero{grid-template-columns:1fr;gap:28px;padding-top:36px}.heroimg{height:380px;grid-row:1}
+.facts{grid-template-columns:1fr 1fr;row-gap:20px}.fact:nth-child(2){border:0}.storyinner{grid-template-columns:1fr;gap:24px}.sectionhead h2,.promo h2{font-size:32px}.faq{padding:56px 0}}
+</style>
+</head>
+<body>
+<div class="announcement">COMBO 3 ÁO GIẢM 25% · ĐỔI TRẢ TRONG 14 NGÀY</div>
+<header class="wrap nav"><a class="logo" href="#top">SENKU</a><nav class="navlinks"><a href="#san-pham">Sản phẩm</a><a href="#ly-do">Vì sao chọn áo này</a><a href="#hoi-dap">Hỏi đáp</a></nav><a class="navcta" href="mua-hang.html">ĐẶT ÁO ↗</a></header>
+<main id="top">
+<section class="wrap hero">
+<div>
+<div class="eyebrow">Áo len cổ cao Totoka</div>
+<h1>Sáng lạnh, đi học không còn phải run.</h1>
+<p>Một chiếc áo len cổ cao dễ mặc, nhiều màu dễ phối, giá 150.000₫. Mua 3 áo chỉ còn 337.500₫, và nếu mặc không vừa thì đổi trả trong 14 ngày.</p>
+<div class="price-line"><b>150.000₫</b> / áo &nbsp;·&nbsp; combo 3 áo <b>337.500₫</b></div>
+<div class="actions"><a class="button" href="mua-hang.html">CHỌN MÀU &amp; ĐẶT ÁO <span>↗</span></a><a class="quiet" href="#ly-do">Vì sao chọn áo này</a></div>
+</div>
+<div class="heroimg"><img src="totoka-sweater.jpg" alt="Áo len cổ cao Totoka treo cạnh nhau với nhiều màu"><div class="imgnote">CỔ CAO · NHIỀU MÀU · 150.000₫</div></div>
+</section>
+<section class="wrap facts">
+<div class="fact"><strong>150.000₫</strong><span>GIÁ MỖI ÁO</span></div>
+<div class="fact"><strong>−25%</strong><span>KHI MUA 3 ÁO</span></div>
+<div class="fact"><strong>14 ngày</strong><span>ĐỔI TRẢ NẾU KHÔNG VỪA</span></div>
+<div class="fact"><strong>5 màu</strong><span>ĐỎ MẬN · KEM · NÂU · TRẮNG · ĐEN</span></div>
+</section>
+<section class="wrap section" id="san-pham">
+<div class="sectionhead"><div class="eyebrow">Chọn chiếc áo của bạn</div><h2>Áo len cổ cao Totoka</h2><p>Một kiểu áo, năm màu. Chọn màu và size ở trang đặt hàng.</p></div>
+<div class="colors"><article><a href="mua-hang.html"><div class="cardimg"><img src="totoka-sweater.jpg" alt="Áo len cổ cao Totoka nhiều màu"><span class="tag">NHIỀU MÀU</span></div></a>
+<div class="productrow"><span>Áo len cổ cao Totoka</span><span class="price">150.000₫</span></div>
+<div class="sub">Size S · M (freesize) · L</div>
+<div class="chips"><span>Đỏ mận</span><span>Kem</span><span>Nâu</span><span>Trắng</span><span>Đen</span></div></article></div>
+</section>
+<section class="story" id="ly-do"><div class="wrap storyinner">
+<div><div class="eyebrow">Vì sao chọn áo này</div><h2>Mặc một chiếc, cả sáng không phải co ro.</h2>
+<p>Sáng sớm đi học, trời lạnh là lúc ai cũng ngại rời khỏi chăn. Áo len cổ cao là lớp ngoài đơn giản nhất: khoác lên là xong, không cần phối cầu kỳ, màu nào cũng dễ đi cùng đồ bạn đã có.</p>
+<p>Giá 150.000₫ cho một chiếc, và mua 3 chiếc thì rẻ hơn 25%, giá phù hợp không lo tốn money.</p></div>
+<div class="benefits">
+<div class="benefit"><b>01 · Cổ cao, mặc là xong</b>Dáng cổ cao ôm quanh cổ, một lớp áo là đủ gọn cho ngày đi học.</div>
+<div class="benefit"><b>02 · Giá rõ ràng</b>150.000₫ / áo. Mua 3 áo còn 337.500₫ (giảm 25%).</div>
+<div class="benefit"><b>03 · Mặc không vừa thì đổi</b>Đổi trả trong 14 ngày, nên bạn không phải đoán size một mình.</div>
+</div></div></section>
+<section class="wrap faq" id="hoi-dap"><div class="sectionhead"><div class="eyebrow">Trước khi đặt</div><h2>Câu hỏi thường gặp</h2></div>
+<details><summary>Áo có những màu nào?</summary><p>Đỏ mận, kem, nâu, trắng và đen. Chọn màu ở trang đặt hàng.</p></details>
+<details><summary>Giá bao nhiêu, mua nhiều có rẻ hơn không?</summary><p>150.000₫ một áo. Mua 3 áo (có thể khác màu) còn 337.500₫, tức giảm 25%.</p></details>
+<details><summary>Nếu mặc không vừa thì sao?</summary><p>Bạn được đổi trả trong 14 ngày.</p></details>
+<details><summary>Đặt hàng như thế nào?</summary><p>Vào trang đặt hàng, chọn màu, size, số lượng, rồi gửi tin nhắn đặt hàng cho shop. Địa chỉ và cách thanh toán được chốt trực tiếp qua tin nhắn.</p></details>
+</section>
+<section class="promo"><div class="eyebrow" style="color:#d8cfb6">Combo 3 áo</div><h2>Chọn 3 màu, giảm 25%</h2><p>150.000₫ một chiếc · Combo 3 áo chỉ 337.500₫.<br>Đổi trả trong 14 ngày nếu không vừa.</p><a class="button" href="mua-hang.html">ĐẶT ÁO NGAY <span>↗</span></a></section>
+</main>
+<footer class="wrap footer"><a href="#top" class="logo">SENKU</a><div class="social"><a href="https://www.instagram.com/" target="_blank" rel="noreferrer">INSTAGRAM ↗</a><a href="https://www.facebook.com/" target="_blank" rel="noreferrer">FACEBOOK ↗</a></div><div class="copy">© 2026 Senku · Totoka knitwear</div></footer>
+</body></html>

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Đặt áo len Totoka — Senku</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}body{margin:0;color:#292821;font-family:'DM Sans',sans-serif;background:#f8f7f4}
+.wrap{width:min(1000px,calc(100% - 36px));margin:auto}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e8e5de}
+.logo{font:700 28px 'Playfair Display',serif;letter-spacing:.04em;text-decoration:none;color:inherit}.back{font-size:12px;color:#777;text-decoration:none}
+.layout{display:grid;grid-template-columns:1fr 1fr;gap:54px;padding:52px 0}
+.photo{height:520px;background:#eae7e0}.photo img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.eyebrow{font-size:11px;color:#626750;letter-spacing:.15em;font-weight:700}
+h1{font:500 38px/1.15 'Playfair Display',serif;margin:13px 0}
+.description{font-size:14px;color:#6b6862;line-height:1.8;margin:0}
+.price{font-size:23px;font-weight:700;margin:18px 0 4px}
+.deal{background:#eeede7;padding:13px 15px;font-size:13px;margin:14px 0 8px;line-height:1.6}
+label{display:block;font-size:12px;font-weight:600;margin:16px 0 7px}
+select,input{width:100%;padding:13px;border:1px solid #dedbd3;background:#fff;font:14px 'DM Sans',sans-serif;color:#292821}
+button{width:100%;background:#292821;color:#fff;border:0;padding:16px;margin-top:22px;font:600 12px 'DM Sans',sans-serif;letter-spacing:.12em;cursor:pointer}button:hover{background:#626750}
+.total{margin-top:18px;font-size:14px;display:flex;justify-content:space-between;border-top:1px solid #e8e5de;padding-top:14px}.total b{font-size:18px}
+.fine{font-size:12px;color:#777;line-height:1.7;margin-top:14px}
+.result{display:none;margin-top:18px;background:#e8eee4;padding:16px;font-size:13px;line-height:1.7}
+.result pre{white-space:pre-wrap;font:13px/1.7 'DM Sans',sans-serif;margin:8px 0 12px;background:#fff;padding:12px}
+.result button{margin:0 0 8px;padding:13px}.result a{display:block;text-align:center;background:#626750;color:#fff;padding:13px;font-size:12px;letter-spacing:.1em;font-weight:600;text-decoration:none}
+.foot{text-align:center;color:#888;font-size:11px;border-top:1px solid #e8e5de;padding:22px}
+@media(max-width:700px){.layout{grid-template-columns:1fr;gap:26px;padding:26px 0}.photo{height:360px}h1{font-size:32px}}
+</style></head>
+<body>
+<header class="wrap nav"><a class="logo" href="index.html">SENKU</a><a class="back" href="index.html">← Quay lại cửa hàng</a></header>
+<main class="wrap layout">
+<div class="photo"><img src="totoka-sweater.jpg" alt="Áo len cổ cao Totoka nhiều màu"></div>
+<section>
+<div class="eyebrow">ĐẶT ÁO · TOTOKA</div>
+<h1>Áo len cổ cao cho sáng lạnh</h1>
+<p class="description">Chọn màu, size và số lượng, rồi gửi tin nhắn đặt hàng cho shop. Mặc không vừa thì đổi trả trong 14 ngày.</p>
+<div class="price">150.000₫ <span style="font-size:12px;font-weight:400;color:#777">/ áo</span></div>
+<div class="deal"><b>Combo:</b> mua 3 áo chỉ còn <b>337.500₫</b> (giảm 25%, có thể chọn khác màu).</div>
+<form id="order">
+<label for="color">Màu sắc</label>
+<select id="color"><option>Đỏ mận</option><option>Kem</option><option>Nâu</option><option>Trắng</option><option>Đen</option></select>
+<label for="size">Kích cỡ</label>
+<select id="size"><option>M (freesize)</option><option>S</option><option>L</option><option>XL</option></select>
+<label for="qty">Số lượng</label>
+<select id="qty"><option value="1">1 áo</option><option value="2">2 áo</option><option value="3">3 áo (giảm 25%)</option></select>
+<label for="name">Tên của bạn</label>
+<input id="name" type="text" placeholder="Nhập tên" required>
+<label for="phone">Số điện thoại</label>
+<input id="phone" type="tel" placeholder="Nhập số điện thoại" required>
+<label for="address">Địa chỉ nhận hàng</label>
+<input id="address" type="text" placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành" required>
+<div class="total"><span>Tạm tính</span><b id="total">150.000₫</b></div>
+<button type="submit">GỬI ĐƠN ĐẶT HÀNG</button>
+<div class="fine">Thông tin của bạn chỉ dùng để shop liên hệ và giao hàng. Shop sẽ nhắn xác nhận đơn và cách thanh toán. Combo 3 áo tính 337.500₫; các số lượng khác tính 150.000₫ mỗi áo.</div>
+<div class="result" id="result" role="status"><b id="resulttitle">Đơn của bạn:</b><pre id="msg"></pre><button type="button" id="copy">SAO CHÉP TIN NHẮN</button><a id="send" href="#" target="_blank" rel="noreferrer" style="display:none">GỬI CHO SHOP ↗</a></div>
+</form>
+</section></main>
+<footer class="foot">© 2026 Senku · Totoka knitwear</footer>
+<script>
+// Dán link Web App của Google Apps Script vào đây (xem file apps-script.gs). Để trống thì form chỉ tạo tin nhắn để sao chép.
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbymweTrF1VpRkcYTLqQdPgZbn_lPPjyNVvIZybD3Oxdzl_T63zDw91bLUBJgXH856Zw/exec";
+// Link nhắn tin của shop (ví dụ https://zalo.me/SỐ_ĐIỆN_THOẠI). Có thể để trống.
+const CONTACT_URL = "";
+const fmt = n => n.toLocaleString('vi-VN') + '₫';
+const calc = q => q === 3 ? 337500 : q * 150000;
+const $ = id => document.getElementById(id);
+const qtyEl = $('qty');
+const update = () => $('total').textContent = fmt(calc(Number(qtyEl.value)));
+qtyEl.addEventListener('change', update); update();
+
+$('order').addEventListener('submit', async e => {
+  e.preventDefault();
+  const q = Number(qtyEl.value);
+  const order = {
+    name: $('name').value.trim(), phone: $('phone').value.trim(), address: $('address').value.trim(),
+    color: $('color').value, size: $('size').value, qty: q, total: fmt(calc(q))
+  };
+  const text = `Chào shop Senku, mình muốn đặt áo len cổ cao Totoka:\n- Màu: ${order.color}\n- Size: ${order.size}\n- Số lượng: ${q} áo\n- Tạm tính: ${order.total}\nTên: ${order.name}\nSĐT: ${order.phone}\nĐịa chỉ: ${order.address}`;
+  $('msg').textContent = text;
+  const box = $('result'); box.style.display = 'block';
+  const btn = e.target.querySelector('button[type=submit]');
+ if (APPS_SCRIPT_URL) {
+    btn.disabled = true; btn.textContent = 'ĐANG GỬI...';
+    try {
+      await fetch(APPS_SCRIPT_URL, {method:'POST', mode:'no-cors', headers:{'Content-Type':'text/plain;charset=utf-8'}, body: JSON.stringify(order)});
+      note = 'Đơn đã được gửi đi. Nếu sau 24 giờ chưa thấy shop liên hệ, hãy nhắn trực tiếp cho shop kèm nội dung dưới đây.';
+    } catch (err) {
+      note = 'Chưa gửi được đơn (lỗi mạng). Hãy sao chép tin nhắn dưới đây và gửi trực tiếp cho shop.';
+    }
+    btn.disabled = false; btn.textContent = 'GỬI ĐƠN ĐẶT HÀNG';
+  }
+  $('resulttitle').textContent = note;
+  const send = $('send');
+  if (CONTACT_URL) { send.href = CONTACT_URL; send.style.display = 'block'; }
+  $('copy').onclick = () => navigator.clipboard.writeText(text).then(() => { $('copy').textContent = 'ĐÃ SAO CHÉP ✓'; });
+  box.scrollIntoView({behavior:'smooth', block:'nearest'});
+});
+</script>
+</body></html>
+
+ 
